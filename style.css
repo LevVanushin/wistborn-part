@@ -4,18 +4,36 @@
     cursor: default;
 }
 :root{
+    /* Fonts */
     --montserrat: "Montserrat", sans-serif;
     --inter: "Inter", sans-serif;
     --oleo: "Oleo Script", system-ui;
     --poppins: "Poppins", sans-serif;
+    /* Fonts */
+
+    /* Colors / Styles */
+    --gradient: linear-gradient(to right, rgba(79, 195, 247, 1), white);
+    /* Colors / Styles */
+
 }
+
 
 body{
-    min-height: 100vh;
     background-color: rgba(26, 26, 26, 1);
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 
+button{
+    font: 500 15px var(--montserrat);
 
+    background-color: transparent;
+    color: white;
+    border: #4FC3F7 1px solid;
+    border-radius: 9px;
+    text-align: center;
+}
 
 .container{
     position: relative;
@@ -47,13 +65,7 @@ header h1{
 header button{
     width: 126px;
     height: 45px;
-    text-align: center;
-    font: 500 15px var(--montserrat);
 
-    background-color: transparent;
-    color: white;
-    border: #4FC3F7 1px solid;
-    border-radius: 9px;
 
 }
 
@@ -81,14 +93,18 @@ ul li a{
 nav li a:hover{
     color: #4FC3F7;
 }
- 
+
 
 @media (max-device-width: 1244px) {
     header{
         column-gap: 20px;
     }
     .container{
-        padding: 0 15px 0px 15px;
+        padding: 60px 15px 0px 15px;
+    }
+
+    #all{
+        padding: 0px 30px;
     }
 }
 
@@ -109,7 +125,6 @@ nav li a:hover{
 
 main{
     max-width: 100%;
-    height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -127,13 +142,23 @@ main{
 
 main .wrapper-photo-part{
     position: relative;
-    max-width: 1025px;
+    width: 1025px;
     height: 764px;
     margin: 0 auto;
-
+    
 }
 
+@media (max-device-width: 1100px){
+    main .wrapper-photo-part{
+        width: 100%;
+        max-width: 1025px;
+    }
+}
 .wrapper-photo-part > div{
+    background-image: url(./images/bg-main.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 500px;
     max-width: 100%;
     height: 100%;
     display: flex;
@@ -161,7 +186,7 @@ main .wrapper-photo-part{
     font: 600 26px var(--poppins);
     color: transparent;
     background-clip: text;
-    background-image: linear-gradient(to right, rgba(79, 195, 247, 1), white);
+    background-image: var(--gradient);
 }
 
 .description{
@@ -169,7 +194,6 @@ main .wrapper-photo-part{
     font: 500 19px var(--poppins);
     text-align: center;
     color: #E1E1E1;
-    line-height: 30px;
 }
 
 .wrapper-photo-part > div > button{
@@ -195,4 +219,68 @@ button{
 
 body button:hover{
     background-color: #4FC3F7;
+}
+
+@media (max-device-width: 500px){
+    .me{
+        margin-bottom: 38px;
+    }
+    .me h1{
+        font-size: 42px;
+    }
+    .me p{
+        font-size: 18px;
+    }
+
+    .description{
+        font-size: 14px;
+        line-height: 20pt;
+    }
+}
+
+.wrapper-about{
+    max-width: 840px;
+    margin: 0 auto;
+}
+.about-me{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 40px;
+    padding-top: 174px;
+}
+
+.about-me > .caption{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-me > .caption h1{
+    font: 900 45px var(--inter);
+    color: white;
+}
+
+.about-me > .caption p{
+    font: 600 14px var(--inter);
+    background-clip: text;
+    color: transparent;
+    background-image: var(--gradient);
+}
+
+.about-me > .description{
+    max-width: 840px;
+
+    font: 500 17px var(--inter);
+    color: #E1E1E1;
+    text-align: center;
+}
+
+.about-me > button{
+    width: 216px;
+    height: 55px;
+    border-radius: 55px;
 }
