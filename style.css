@@ -246,18 +246,18 @@ body button:hover{
     padding-top: 174px;
 }
 
-.about-me > .caption{
+.caption{
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.about-me > .caption h1{
+.caption h1{
     font: 900 45px var(--inter);
     color: white;
 }
 
-.about-me > .caption p{
+.caption p{
     font: 600 14px var(--inter);
     background-clip: text;
     color: transparent;
@@ -276,4 +276,23 @@ body button:hover{
     width: 216px;
     height: 55px;
     border-radius: 55px;
+}
+
+
+
+.wrapper-what-do{
+    width: 929px;
+    margin: 0 auto;
+}
+
+.wrapper-what-do > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 81px;
+}
+
+.wrapper-what-do > div > .grid{
+    display: grid;
+    grid-template-columns: minmax(auto-fit, minmax(289px, 1fr));
 }
