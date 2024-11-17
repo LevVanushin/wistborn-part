@@ -66,7 +66,6 @@ header button{
     width: 126px;
     height: 45px;
 
-
 }
 
 
@@ -131,18 +130,11 @@ main{
     padding-top: 24px;
 }
 
-.bg{
-    position: absolute;
-    align-self: center;
-    border-radius: 500px;
-    max-width: 1025px;
-    max-height: 764px;
-    z-index: -1;
-}
 
 main .wrapper-photo-part{
     position: relative;
-    width: 1025px;
+    max-width: 1025px;
+    
     height: 764px;
     margin: 0 auto;
     
@@ -158,6 +150,7 @@ main .wrapper-photo-part{
     background-image: url(./images/bg-main.svg);
     background-repeat: no-repeat;
     background-position: center;
+    padding: 0px 116.5px;
     border-radius: 500px;
     max-width: 100%;
     height: 100%;
