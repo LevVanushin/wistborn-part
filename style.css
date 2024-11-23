@@ -281,18 +281,58 @@ body button:hover{
 
 
 .wrapper-what-do{
-    width: 929px;
-    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: 220px;
 }
 
-.wrapper-what-do > div{
-    width: 100%;
+.wrapper-what-do > .in{
+    
+    max-width: 929px;
     display: flex;
     flex-direction: column;
     row-gap: 81px;
+    margin: 0 auto;
 }
 
 .wrapper-what-do > div > .grid{
+    min-height: 573px;
     display: grid;
-    grid-template-columns: minmax(auto-fit, minmax(289px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(289px, 1fr));
+    column-gap: 24px;
+    row-gap: 25px;
+}
+
+
+.grid div:nth-child(4){
+    grid-column: span 2;
+}
+
+.grid > div{
+    display: flex;
+    flex-direction: column;
+    padding: 29px 20px 24px 26px;
+    background-color: rgba(28, 28, 28, 0.5);
+    border-radius: 10px;
+    border: 1px #2B2B2B solid;
+    background: linear-gradient(-46deg, rgba(5, 5, 5, 1) 0%, rgba(28, 28, 28, 0.5) 0%);
+    row-gap: 18px;
+}
+
+.grid object{
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    background-color: #F5F8FF;
+    border-radius: 9px;
+}
+
+.grid h1{
+    color: white;
+    font: 600 15px var(--inter);
+}
+
+.grid p{
+    color: #E1E1E1;
+    font: 400 14px var(--inter);
 }
