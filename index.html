@@ -35,7 +35,7 @@
     <div class="container">
         <header>
             <h1>Lev</h1>
-            <nav>
+            <nav id="nav" class="navigation">
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
@@ -51,9 +51,11 @@
                 <img src="./images/Vector.svg">
             </object>
 
-            <object class="menu" data="./images/toggle-menu-button.svg" type="image/svg+xml">
-                <img src="./images/toggle-menu-button.svg">
-            </object>
+            <div class="menu" id="modal">
+                <object class="menu" id="modal" data="./images/toggle-menu-button.svg" type="image/svg+xml">
+                    <img src="./images/toggle-menu-button.svg">
+                </object>
+            </div>
         </header>
     </div>
 
@@ -148,5 +150,6 @@
     
 
 </div>
+    <script src="./script.js"></script>
 </body>
 </html>
