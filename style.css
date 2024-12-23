@@ -38,6 +38,7 @@ button:not(.menu){
 .container{
     position: relative;
     max-width: 1244px;
+    max-height: 100%;
     margin: 0 auto;
     overflow: hidden;
     padding-top: 60px;
@@ -119,11 +120,20 @@ nav li a:hover{
     header button{
         display: none;
     }
-    header {
-        height: 500px;
+    .sun-btn{
+        display: none;
+    }
+    header{
+        max-height: 500px;
+    }
+    header nav{
+        max-width: 100%;
+        max-height: 100%;
     }
     header ul{
         flex-direction: column;
+        line-height: 50px;
+        max-height: 100%;
     }
     header .menu{
         display: block;
@@ -301,7 +311,7 @@ body button:hover{
 .wrapper-what-do{
     width: 100%;
     position: relative;
-    top: 220px;
+    padding-top: 220px;
 }
 
 .wrapper-what-do > .in{
@@ -324,6 +334,7 @@ body button:hover{
 
 .grid div:nth-child(4){
     grid-column: span 2;
+    row-gap: 16px;
 }
 
 .grid > div{
@@ -337,7 +348,7 @@ body button:hover{
     row-gap: 18px;
 }
 
-.grid object{
+.grid object:not(.not){
     width: 24px;
     height: 24px;
     padding: 10px;
@@ -351,6 +362,33 @@ body button:hover{
 }
 
 .grid p{
+    float: left;
     color: #E1E1E1;
     font: 400 14px var(--inter);
+}
+
+.grid div:nth-child(4):not(& >div){
+    display: flex;
+    flex-direction: row;
+}
+
+.grid div:nth-child(4) > div{
+    row-gap: 16px;
+}
+
+.not{
+    width: 234px;
+    height: 218px;
+}
+
+
+@media (max-device-width: 974px){
+    .grid div:nth-child(4){
+        grid-row: span 2;
+        grid-column: span 1;
+    }
+    .grid div:nth-child(4){
+        display: flex;
+        flex-direction: column;
+    }
 }
