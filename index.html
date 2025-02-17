@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="content" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -50,8 +51,8 @@
                 <img src="./images/Vector.svg">
             </object>
 
-            <div class="menu" id="modal">
-                <object class="menu" id="modal" data="./images/toggle-menu-button.svg" type="image/svg+xml">
+            <div class="menu">
+                <object class="menu" data="./images/toggle-menu-button.svg" type="image/svg+xml">
                     <img src="./images/toggle-menu-button.svg">
                 </object>
             </div>
@@ -149,6 +150,52 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="container-form">
+
+            <div id="form" class="get-in-touch">
+                <div class="caption">
+                    <h1>Get In Touch</h1>
+                    <p>Lets work together</p>
+                </div>
+
+                <form name="form" autocomplete="off">
+                        
+                    <label for="log">Name</label>
+                    <input id="log" name="name" type="text" maxlength="30" placeholder="full name">
+
+                    <label for="email">Email</label>
+                    <input id="email" autocomplete="off" name="email" type="text" maxlength="80" placeholder="example@email.com">
+                    
+                    <label for="serv">Service</label>
+                    
+                    <div class="select">
+
+                        <input id="test" name="service" readonly placeholder="Select a service"/>
+                       
+                        <button id="button-select" type="button">
+
+                            <object data="./images/arrow_select.svg" type="image/svg+xml">
+                                <img src="./images/arrow_select.svg" alt="arrow">
+                            </object>
+
+                        </button>
+
+                        <div id="modalSelect" style="display: none;">
+                            <div class="option23 1">Telegram</div>
+                            <div class="options">Gmail</div>
+                        </div>
+                    </div>
+                    
+                    <label for="mes">Message</label>
+                    <textarea id="mes" name="text" type="text" maxlength="1000"></textarea> 
+
+                    <button type="button" id="button-form" class="button">Get in Touch</button>
+                
+                </form>
+
+            </div>
+
         </div>
     </main> 
 
