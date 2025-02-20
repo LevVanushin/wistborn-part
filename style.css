@@ -454,11 +454,11 @@ body button:hover:not(#button-select){
     outline: none;
 }
 
-#form > form > #mes{
+#form > form > #text{
     height: 222px;
 }
 
-#form > form > #mes[type="text"]{
+#form > form > #text[type="text"]{
     text-align: start;
     padding-top: 5px;
     padding-left: 10px;
@@ -515,6 +515,7 @@ body button:hover:not(#button-select){
 
 #form > form .error-form{
     color: red;
+    float: inline-start;
 }
 
 #form > form .button{

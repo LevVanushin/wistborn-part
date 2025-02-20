@@ -159,7 +159,7 @@
                 </div>
 
                 <form name="form" autocomplete="off">
-                        
+
                     <label for="log">Name</label>
                     <input id="log" name="name" type="text" maxlength="30" placeholder="full name">
 
@@ -170,7 +170,7 @@
                     
                     <div class="select">
 
-                        <input class="no-select" id="test" name="service" readonly placeholder="Select a service"/>
+                        <input class="no-select" id="test" name="select" readonly placeholder="Select a service"/>
                        
                         <button id="button-select" type="button">
 
@@ -186,9 +186,12 @@
                         </div>
                     </div>
                     
-                    <label for="mes">Message</label>
-                    <textarea id="mes" name="text" type="text" maxlength="1000"></textarea> 
+                    <label for="text">Message</label>
+                    <textarea id="text" name="text" type="text" maxlength="1000"></textarea> 
 
+                    <div class="error-form">
+                        <p></p>
+                    </div>
                     <button type="button" id="button-form" class="button">Get in Touch</button>
                 
                 </form>
