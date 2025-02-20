@@ -44,6 +44,14 @@ button:not(#button-select){
     padding-top: 60px;
 }
 
+/* @keyframes startLoad {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+} */
 header{
 
     position: relative;
@@ -87,6 +95,7 @@ ul{
 .navigation{
     display: flex;
     flex-direction: column;
+    animation: startLoad 3s ease;
 }
 
 ul li a{
@@ -431,7 +440,7 @@ body button:hover:not(#button-select){
     align-self: flex-start;
 }
 
-#form > form input, select, textarea{
+#form > form input, textarea{
     background-color: transparent;
     border: 1px rgba(214, 221, 237, 1) solid;
     border-radius: 10px;
@@ -524,27 +533,77 @@ body button:hover:not(#button-select){
     color: white;
 }
 
+@keyframes opac {
+    from { opacity: 0%;}
+    to {opacity: 100%;}
+}
+
+
+
+@keyframes positionOptionFirst {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 71px;
+    }
+}
+
+@keyframes positionOptionSecond {
+    from {
+        top: 0px;
+    }
+    to {
+        top: 71px;
+    }
+}
+
+
 .modal-option{
     position: absolute;
-    width: 500px;
-    height: 100px;
-    top: 70px;
-
-    background-color: #2B2B2B;
-    border-radius: 15px;
+    width: 100%;
+    height: 210px;
     flex-direction: column;
-    justify-content: space-between;
+    transition: all .2s ease;
+    animation: opac .4s 1;
+    z-index: -1;
+}
+
+
+.first {
+    animation: positionOptionFirst .4s 1;
+    top: 71px;
+}
+
+.second{
+    animation: positionOptionSecond .8s 1;
+    top: 71px;
+}
+
+.no-select {
 }
 
 .modal-option > div {
-    height: 100%;
-    border: 1px #717171 solid;
-    border-radius: 2px;
+    position: relative;
+    background-color: rgb(22, 22, 22);
+
+    height: 70px;
+    border: 1px rgba(214, 221, 237, 1) solid;
+    border-radius: 10px;
     text-align: left;
+    padding-left: 20px;
+    font: 600 23px var(--inter);
+
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 50%);
     -webkit-transition: background-color .2s ease;
     -moz-transition: background-color .2s ease;
     -o-transition: background-color .2s ease;
+    
 }
+
+
 
 .modal-option > div:hover{
     background: #7a7a7a;

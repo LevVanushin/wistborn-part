@@ -55,7 +55,8 @@ inputOfSelect.addEventListener('open', (e) => {
 
     modalSelectBlock.classList.toggle('modal-option');
     modalSelectBlock.style.display = 'flex';
-
+    modalSelectBlock.style.opacity = `${100}%`;
+    
 })
 
 // script for option
@@ -64,7 +65,7 @@ let optionsModal = modalSelectBlock.getElementsByTagName('div');
 
 optionsModal[0].addEventListener('click', (e) => {
     inputOfSelect.value = optionsModal[0].textContent;
-    inputOfSelect.dispatchEvent(closeEvent)
+    inputOfSelect.dispatchEvent(closeEvent);
 })
 
 optionsModal[1].addEventListener('click', (e) => {
