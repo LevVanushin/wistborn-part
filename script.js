@@ -4,10 +4,13 @@ let nav = document.getElementById("nav");
 console.log(nav.style)
 
 btn.addEventListener('click', (e) => {
-    console.log('click');
-    
-    if (nav.style.diplay == 'none') {
-        nav.style.display = 'flex'
+    modal.classList.toggle('nav-modal');
+    if (modal.style.display == 'none' || modal.style.display == false){
+        modal.style.display = "flex";
+    }
+    else if (modal.style.display != 'none'){
+        modal.style.display = "none";
+        modal.classList.remove('nav-modal');
     }
 })
 
