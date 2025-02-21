@@ -36,8 +36,6 @@ inputOfSelect.addEventListener('close', (e) => {
     btnArrowSelect.style.transform = "rotate(0deg)";
     isRotated = false;
 
-    console.log("Start close event");
-
     modalSelectBlock.classList.toggle('modal-option');
     modalSelectBlock.style.display = 'none';
 
@@ -46,7 +44,6 @@ inputOfSelect.addEventListener('close', (e) => {
 // code for open modal
 
 inputOfSelect.addEventListener('open', (e) => {
-    console.log("Start open event");
     btnArrowSelect.style.transform = "rotate(-90deg)";
     isRotated = true;
 
@@ -110,7 +107,7 @@ function sendForm(e) {
 
         }
 
-        p.textContent = ''
+        p.textContent = '';
           
     }
 
