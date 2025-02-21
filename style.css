@@ -128,11 +128,13 @@ header .menu{
 .menu object {
     pointer-events: none;
 }
-.nav-modal ul{
-    display: flex;
-    flex-direction: column;
-    line-height: 80px;
-    list-style-type: none;
+.nav-modal ul {
+    display: none;
+}
+
+
+#nav {
+    display: none;
 }
 
 @media (max-width: 1244px) {
@@ -156,15 +158,18 @@ header .menu{
     header{
         max-height: 500px;
     }
-
+    .nav-modal ul{
+        display: flex;
+        flex-direction: column;
+        line-height: 80px;
+        list-style-type: none;
+    }
     header .menu{
         display: block;
     }
     .navigation {
         display: none;
     }
-
-    
 
 }
 
@@ -194,6 +199,7 @@ main .wrapper-photo-part{
         max-width: 1025px;
     }
 }
+
 .wrapper-photo-part > div{
     background-image: url(./images/bg-main.svg);
     background-repeat: no-repeat;

@@ -3,12 +3,14 @@ let header = document.getElementsByTagName("header")[0];
 let nav = document.getElementById("nav");
 
 btn.addEventListener('click', () => {
+    
     nav.classList.toggle("nav-modal")
     if (nav.style.display == 'none' || nav.style.display == false) {
         nav.style.display = 'flex';
     } else {
         nav.style.display = 'none';
     }
+
 })
 
 // script for select --
