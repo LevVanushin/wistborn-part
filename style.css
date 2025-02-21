@@ -41,6 +41,12 @@ button:not(#button-select, .menu){
     max-height: 100%;
     margin: 0 auto;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     padding-top: 60px;
 }
 
@@ -86,7 +92,7 @@ header img{
     height: 30px;
 }
 
-ul{
+header ul{
     width: 541px;
     display: flex;
     justify-content: space-between;
@@ -122,10 +128,11 @@ header .menu{
 .menu object {
     pointer-events: none;
 }
-header .nav-modal ul{
+.nav-modal ul{
     display: flex;
     flex-direction: column;
     line-height: 80px;
+    list-style-type: none;
 }
 
 @media (max-width: 1244px) {
