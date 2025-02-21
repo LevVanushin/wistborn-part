@@ -1,16 +1,13 @@
 let btn = document.getElementById("modal");
 let header = document.getElementsByTagName("header")[0];
 let nav = document.getElementById("nav");
-console.log(nav.style)
 
-btn.addEventListener('click', (e) => {
-    modal.classList.toggle('nav-modal');
-    if (modal.style.display == 'none' || modal.style.display == false){
-        modal.style.display = "flex";
-    }
-    else if (modal.style.display != 'none'){
-        modal.style.display = "none";
-        modal.classList.remove('nav-modal');
+btn.addEventListener('click', () => {
+    nav.classList.toggle("nav-modal")
+    if (nav.style.display == 'none' || nav.style.display == false) {
+        nav.style.display = 'flex'
+    } else {
+        nav.style.display = 'none'
     }
 })
 

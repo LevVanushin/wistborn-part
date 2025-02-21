@@ -64,6 +64,7 @@ header{
 
 }
 
+
 header > .menu{
     border: none;
     display: none;
@@ -121,7 +122,11 @@ header .menu{
 .menu object {
     pointer-events: none;
 }
-
+header .nav-modal ul{
+    display: flex;
+    flex-direction: column;
+    line-height: 80px;
+}
 
 @media (max-width: 1244px) {
     header{
@@ -150,10 +155,9 @@ header .menu{
     }
     .navigation {
         display: none;
-        flex-direction: column;
-        line-height: 50px;
-        max-height: 100%;
     }
+
+    
 
 }
 
