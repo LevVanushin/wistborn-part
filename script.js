@@ -1,7 +1,15 @@
 let btn = document.getElementById("modal");
 let header = document.getElementsByTagName("header")[0];
 let nav = document.getElementById("nav");
+console.log(nav.style)
 
+btn.addEventListener('click', (e) => {
+    console.log('click');
+    
+    if (nav.style.diplay == 'none') {
+        nav.style.display = 'flex'
+    }
+})
 
 // script for select --
 

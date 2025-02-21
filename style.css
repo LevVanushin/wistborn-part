@@ -25,7 +25,7 @@ body::-webkit-scrollbar{
     display: none;
 }
 
-button:not(#button-select){
+button:not(#button-select, .menu){
     font: 500 15px var(--montserrat);
 
     background-color: transparent;
@@ -110,8 +110,20 @@ nav li a:hover{
     color: #4FC3F7;
 }
 
+header .menu{
+    display: none;
+    padding: 30px 0px 30px 30px;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+}
 
-@media (max-device-width: 1244px) {
+.menu object {
+    pointer-events: none;
+}
+
+
+@media (max-width: 1244px) {
     header{
         column-gap: 20px;
     }
@@ -124,36 +136,25 @@ nav li a:hover{
     }
 }
 
-@media (max-device-width: 820px){
-    header button{
+@media (max-width: 820px){
+    header button, .sun-btn{
         display: none;
     }
-    .sun-btn{
-        display: none;
-    }
+    
     header{
         max-height: 500px;
     }
-    header nav{
-        max-width: 100%;
-        max-height: 100%;
+
+    header .menu{
+        display: block;
     }
-    header ul{
+    .navigation {
+        display: none;
         flex-direction: column;
         line-height: 50px;
         max-height: 100%;
     }
-    header .menu{
-        display: block;
-        padding: 30px 0px 30px 30px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
 
-    header h1{
-        display: block;
-    }
 }
 
 /* Main part */
@@ -246,7 +247,7 @@ button{
     transition: .2s background-color linear;
 }
 
-body button:hover:not(#button-select){
+body button:hover:not(#button-select, .menu){
     background-color: #4FC3F7;
 }
 
