@@ -514,3 +514,92 @@ main .left-side button:hover{
     position: relative;
     left: 60px;
 }
+
+/* featured part */
+
+.container-featured{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    margin-top: 120px;
+}
+
+.featured{
+    position: relative;
+    max-width: 1200px;
+    min-height: 698px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured div:nth-child(1){
+    position: relative;
+    left: 16px;
+    max-width: 600px;
+    align-self: self-start;
+}
+
+.featured div:nth-child(1) > h1 {
+    font-size: 39px;
+    font-weight: 400;
+    color: #1B1A1A;
+}
+
+.featured div:nth-child(1) > p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #645C55;
+}
+
+.featured div:nth-child(2) {
+    display: flex;
+}
+
+.featured div:nth-child(2) div{
+    width: 379px;
+    height: 456px;
+}
+
+.featured div:nth-child(2) > div:nth-child(2){
+    position: relative;
+    border: none;
+    height: 456px;
+    width: 379px;
+    background: url(./images/featured\ 2.svg);
+}
+
+.featured div:nth-child(2) > div:nth-child(1){
+    background: url(./images/featured\ 1.svg);
+} 
+
+.featured div:nth-child(2) > div:nth-child(3){
+    background: url(./images/featured\ 3.svg);
+}
+
+.featured div:nth-child(2) > div:nth-child(2) div {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5em;
+    left: 40px;
+    top: 40px;
+}
+.featured div:nth-child(2) > div:nth-child(2) div > h3{
+    font-size: 14px;
+    font-weight: 300;
+    color: #645C55;
+}
+
+.featured div:nth-child(2) > div:nth-child(2) div > h2{
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.featured div:nth-child(2) > div:nth-child(2) > div + button{
+    position: absolute;
+}
