@@ -557,8 +557,11 @@ main .left-side button:hover{
     color: #645C55;
 }
 
-.featured div:nth-child(2) {
+.featured > div:nth-child(2) {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .featured div:nth-child(2) div{
@@ -574,18 +577,13 @@ main .left-side button:hover{
     background: url(./images/featured\ 2.svg);
 }
 
-.featured div:nth-child(2) > div:nth-child(1){
-    background: url(./images/featured\ 1.svg);
-} 
-
-.featured div:nth-child(2) > div:nth-child(3){
-    background: url(./images/featured\ 3.svg);
-}
 
 .featured div:nth-child(2) > div:nth-child(2) div {
     display: flex;
     flex-direction: column;
     line-height: 1.5em;
+    width: 50%;
+    height: 25%;
     left: 40px;
     top: 40px;
 }
@@ -598,8 +596,37 @@ main .left-side button:hover{
 .featured div:nth-child(2) > div:nth-child(2) div > h2{
     font-size: 23px;
     font-weight: 400;
+    color: #403E3B;
 }
 
+.featured div:nth-child(2) > div:nth-child(2) > button{
+    border: none;
+    border-radius: 14px;
+    width: 133px;
+    height: 46px;
+    background-color: #1B1A1A;
+    bottom: 40px;
+    left: 45px;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
 .featured div:nth-child(2) > div:nth-child(2) > div + button{
     position: absolute;
+}
+
+.featured div:nth-child(2) > div:nth-child(1) {
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+.featured > button{
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: 400;
+
+    width: 180px;
+    height: 46px;
 }
